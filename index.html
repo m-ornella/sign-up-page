@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+
+<body onload='document.form1.text1.focus()'
+    class="flex flex-col justify-center items-center h-screen bg-gradient-to-r from-purple-500 to-pink-500">
+
+
+    <div class="flex flex-col justify-center items-center h-96 w-96 container mx-auto bg-white p-8 rounded">
+        <div>
+            <h1 class="text-3xl text-gray-dark text-center">Sign Up to get started</h1>
+            <p class="text-center text-gray-dark">Already a member?<a class="text-blue-500" href=""> Sign in</a></p>
+        </div>
+        <div class="flex flex-col justify-center content-between h-screen min-w-full text-sm">
+            <form name="form1" action="#">
+                <label hidden for="email">Enter your email:</label>
+                <input class="border-2 border-gray-200 rounded py-2 w-full mb-4" type="email" id="emailInput" value=""
+                    placeholder="Enter e-mail address" name="text1">
+                <label hidden class="visibility-hidden" for="password">Enter your password:</label>
+                <input class="border-2 border-gray-200 rounded py-2 w-full mb-4" type="password" name="password"
+                    id="passwordInput1" value="" placeholder="Create password">
+                <p id="strengthText" class="text-sm"></p>
+                <label hidden class="visibility-hidden" for="password">Enter your password:</label>
+                <input class="border-2 border-gray-200 rounded py-2 w-full" type="password" name="password"
+                    id="passwordInput2" value="" placeholder="Confirm password">
+                <p id="matchMessage"></p>
+            </form>
+        </div>
+        <div class="w-full">
+            <button id="validateButton"
+                class="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-r from-purple-400 to-pink-400 text-white font-bold py-2 rounded"
+                onclick="validateEmail(document.form1.text1)">SignUp
+            </button>
+            <p id="result" class="text-sm"></p>
+        </div>
+    </div>
+    <script src=" main.js"></script>
+</body>
+
+</html>
